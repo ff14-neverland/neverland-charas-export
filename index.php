@@ -52,6 +52,7 @@ $writer->writeSheetHeader(
 foreach ($sheet['rows'] as $row) {
   $writer->writeSheetRow($sheet_name, $row);
 }
+$filename = 'charas.xlsx';
 $xlsx_string = $writer->writeToString();
 header('Content-disposition: attachment; filename="'. $filename .'"');
 header('Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
